@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids &amp; Family — Arabella Mediterranean Grill</title>
+    <meta name="description" content="Family-friendly Mediterranean dining in Downey, CA. Kids menu, family trays, high chairs, accessible seating. Arabella Mediterranean Grill." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F97316",
+                        secondary: "#15803d",
+                        "bg-light": "#FDFBF7",
+                        "bg-dark": "#1C1917",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#292524",
+                        "txt-light": "#44403C",
+                        "txt-dark": "#E7E5E4",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-bg-light dark:bg-bg-dark text-txt-light dark:text-txt-dark font-body transition-colors duration-300">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed w-full z-50 bg-surface-light/90 dark:bg-bg-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-stone-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img src="media/Arabella_logo.png" alt="Arabella Mediterranean Grill" class="h-12 w-auto rounded-lg" />
+                    <!-- <span class="font-display font-bold text-xl sm:text-2xl tracking-wider text-gray-900 dark:text-white">ARABELLA</span> -->
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="menu.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Menu</a>
+                    <a href="family.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Kids &amp; Family</a>
+                    <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">Order Online</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
+                        <span class="material-icons text-gray-600 dark:text-gray-300 dark:hidden">dark_mode</span>
+                        <span class="material-icons text-gray-600 dark:text-gray-300 hidden dark:inline">light_mode</span>
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none" aria-label="Open menu">
+                    <span class="material-icons text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-stone-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Home</a>
+                <a href="menu.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Menu</a>
+                <a href="family.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Kids &amp; Family</a>
+                <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block bg-primary hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-bold shadow-lg">Order Online</a>
+                <button id="mobile-theme-toggle" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 py-2">
+                    <span class="material-icons">brightness_4</span>
+                    <span>Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <div class="relative bg-surface-light dark:bg-surface-dark overflow-hidden pt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-surface-light dark:bg-surface-dark sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-surface-light dark:text-surface-dark transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                </svg>
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl font-display">
+                            <span class="block xl:inline">Joyful dining for the</span>
+                            <span class="block text-primary xl:inline"> whole family</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-light">
+                            Experience the warmth of communal dining with our specially curated family platters and a menu designed just for your little explorers. Wheelchair accessible, free parking, and a welcoming atmosphere for all.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="#family-trays" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-white bg-primary hover:bg-orange-600 md:py-4 md:text-lg transition-colors">
+                                    View Family Trays
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#kids-menu" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-primary bg-orange-100 hover:bg-orange-200 dark:bg-stone-800 dark:text-primary dark:hover:bg-stone-700 md:py-4 md:text-lg transition-colors">
+                                    Kids Menu
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7ERhkCJBN6Q60tkTYurutUa-Qg9y-n-AIR9HWRvNimgqV55YtHT7XTPI9sZnL-9vd3E58HwVU-TnfmhSDEHwZevvA0mzrDWovdSYZGwijpUmlSFTMKiZ-it4uu2Sr2H4CZfbH73zwouSDqfDwOYXq5sRJ2s9NdS26AOmJx_XlDsD4fb6q74Ukh0JeamROK1yTwBtMsFdE3qATeURcQGWXlDlkp65N4u1QDH4BmOv_5u7d97cRZ7j8Qo3O0j-ZiKoqVV3hEt_5TA" alt="Family enjoying Mediterranean feast together" />
+            <div class="absolute inset-0 bg-gradient-to-r from-surface-light dark:from-surface-dark to-transparent lg:via-surface-light/20 lg:dark:via-surface-dark/20"></div>
+        </div>
+    </div>
+
+    <!-- ===== FAMILY TRAYS ===== -->
+    <section class="py-16 bg-surface-light dark:bg-surface-dark transition-colors" id="family-trays">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-primary font-bold text-xl uppercase tracking-widest mb-3">Sharing is Caring</h2>
+                <h3 class="text-3xl font-display font-bold text-gray-900 dark:text-white sm:text-4xl">Family Feasts &amp; Trays</h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 mx-auto font-light">
+                    Generous portions of our finest grilled meats, fluffy rice, and fresh salads — perfect for gathering around the table.
+                </p>
+            </div>
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Grand Arabella Feast -->
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-700">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLIwg_RE6OvaiHdJHLqdNo7pLyBn71AWNt5ciYklxlrmkhwyV-gnrrqhAsxDRSWx0mAX9rW3TN3gdPbgi87sTRD0X47WgMByoVbrjfURlvS5Stjt1KSU3RZjSwg_ZdCcwQEK4qFqfluuMyvYYKGTB9OtueVwvWPuuTU78IBVukimesBtK1FUhoI-sI8ZVWvXAwlUU6ED4NtPsGtuGRAS8LVx6Y23pXQlq8Q1__PQQkh2UvRW_9BEZsY5exRgOPrrkX-j-CXstOPQ" alt="Grand Mix Grill Platter" />
+                        <div class="absolute top-4 right-4 bg-white dark:bg-stone-800 rounded-full px-3 py-1 text-sm font-bold text-primary shadow-md">Serves 4-5</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-display font-bold text-gray-900 dark:text-white">Grand Arabella Feast</h4>
+                            <span class="text-xl font-bold text-primary">$89.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 font-light">A royal selection of Beef Kabobs, Chicken Tawook, Lamb Chops, and Beef Shawarma. Served with Hummus, Baba Ganoush, Fattoush salad, and family-sized rice.</p>
+                        <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors text-center">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <!-- Chicken Lovers Tray -->
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-700">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWraPNnvjbWPutbiod9ofZUuBMM3V9O0n9Ob62IHUaQmN8rb7J5d21iYiQyIOIad4Qdz0mrSXiV1v-HmbLcPnwtqnK0fa-OsruTiMpNDeYnLwTQhwYsW7L7_qyBAlzvZxvpHhxKGn5BBys-KcDzoiejnye1JddVWzF3A96fEZfEeDU-myGJ_45pgVHrpvjWz_kQ5o3EmvLjwbZFFXASsan2kUoQQmMKfFsdNkHAYobg1ggvcufDVNh-08hG3dT3UY6yU4gM--Wcw" alt="Chicken Lovers Platter" />
+                        <div class="absolute top-4 right-4 bg-white dark:bg-stone-800 rounded-full px-3 py-1 text-sm font-bold text-primary shadow-md">Serves 3-4</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-display font-bold text-gray-900 dark:text-white">Chicken Lovers Tray</h4>
+                            <span class="text-xl font-bold text-primary">$64.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 font-light">Perfect for poultry fans. Generous portions of Chicken Shawarma and Shish Tawook. Includes Garlic Whip, Pickles, Fries, and Greek Salad.</p>
+                        <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors text-center">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                <!-- Mezza Gathering -->
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-700">
+                    <div class="relative h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiv3gCvUGrN_KytddInbaBDoFpFbtL1LKnPwkUV1l7yyC322cjHzKy-Xmlmk-g-LEL0qkTJqz6V9vvc4Qoz-1Gqvj1o_XxgJfygdR5vVk86dw9v2y0Zgu7fw0FY1V3mui8VOP6mfa4omyD0U8wPl2Cw58XhA2tNdcVE9ZL8AyGVMoNfWhvRXVGR1lZK0qgkKf8ccUIceVTTT_gn02zRZ_9wd6ab8bK2xaEBXxN7G1YVDbuAvRNzbms7aJV37iR61yt4bZPuXm3Uw" alt="Vegetarian Mezza Platter" />
+                        <div class="absolute top-4 right-4 bg-white dark:bg-stone-800 rounded-full px-3 py-1 text-sm font-bold text-secondary shadow-md">Vegetarian</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-display font-bold text-gray-900 dark:text-white">Mezza Gathering</h4>
+                            <span class="text-xl font-bold text-primary">$55.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 font-light">A vegetarian delight featuring Falafel, Grape Leaves, Spinach Pies, Hummus with Pine Nuts, Tabbouleh, and warm Pita Bread.</p>
+                        <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block w-full py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors text-center">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KIDS MENU ===== -->
+    <section class="py-20 bg-orange-50 dark:bg-stone-900 relative overflow-hidden transition-colors" id="kids-menu">
+        <div class="absolute top-0 left-0 w-32 h-32 bg-primary opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-primary font-bold text-xl uppercase tracking-widest mb-3">Yummy!</h2>
+                <h3 class="text-4xl font-display font-bold text-gray-900 dark:text-white">Little Explorers Menu</h3>
+                <p class="mt-4 text-lg text-gray-500 dark:text-gray-400 font-light">Healthy, tasty, and fun meals for children.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white dark:bg-surface-dark rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 border-b-4 border-secondary">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 dark:bg-stone-700 flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM8YQRJQU4BULQSMvR6WcuhLFh8N06QmrcVgKNkKcZRuBKg8E47WAkRBixnN7vBlhUmwUSLh6GuqzrRxl-1aS5QZvSsCCwieDz4Em9Mpc1jE8n45qZ4TKOk4seBtaFGTtwNq28xuvEi_31TOLJPivBxdu2KFFH3w48HsTuAuU1JtdEBEPkmMBC3jG-k29IpVw5oZYoh8wCxz3VtUInNKhfv07AWjCjvL_zoy4HtkmWAOS8ewJAqMBhwhaXKt6yzkl1XewilT9bMQ" alt="Chicken Strips" />
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">Chicken Sandwich</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Grilled chicken in a soft bun kids love.</p>
+                    <div class="text-primary font-bold text-lg">$9.99</div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 border-b-4 border-primary">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 dark:bg-stone-700 flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX0CpIEM4MFp9bG5MhuFnx32b3hl4eXXhqiWo-fnc9rUfylgdk-R2MGYFpXPewi6oEXYEn7SlITklLdTlZubmQ0zTcL9Ar0C5K6-Yg8fVuo3oG4_YqncL4csjBh4cPS2bm0Xpnxmuvy1dedGb5rkELKTlSkY-3mDv8v8_7E152i2PV-S-UAhK03pUkkpUkaadLzxjt7apl61jFA8MjjaCbnH5-qBgNpY1YZbMRDYpifDHqCjZCyhKOUSww-c1-CoAaOQqoFal1AQ" alt="Mini Wrap" />
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">Fried Chicken Strips</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Crispy golden chicken strips with a side of fries.</p>
+                    <div class="text-primary font-bold text-lg">$12.99</div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 border-b-4 border-secondary">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 dark:bg-stone-700 flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJPKVgi-xDKa_DgF6mu31aA-chVqPoh7bo6KhxDthlsB1zcNgtuVBPxxditgZxe6UURHhkmuax0wTwDld9PlKhO2_Hxa0ch8Mf1evK24nNThHi9XOv_QSxPB2fAicKMPmjBr7VLt5MAcBDh4a8z6UFrvQ-IwgUFDV4ggczLSZLS5fPW4PFUNNrfDLEDMzVvBjeHJn0yc32eN7HrqW-FVHoePV8NU9Mhp_6GYe1RY5ussi86vXoTIvV7MRGG-GrY8ukoN6tE2Klxg" alt="Rice Bowl" />
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">Kids Rice Bowl</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Fluffy rice topped with diced grilled chicken and corn.</p>
+                    <div class="text-primary font-bold text-lg">$7.99</div>
+                </div>
+                <div class="bg-white dark:bg-surface-dark rounded-xl shadow-md p-6 text-center transform hover:-translate-y-2 transition-transform duration-300 border-b-4 border-primary">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 dark:bg-stone-700 flex items-center justify-center overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJt9lTi36m7NbBksOYs0eCrwMv1D1o5FwTakbYbpBhRpZ_6LplD2zCi7mNlEsc4PknitRObqdGmm940ybg9Pr2hLKZgkojaUClft9RBNPAQzolG37eT3nUvjb_1KNWEtBC_UUStz5z9kppv53B4WKuFV0U4d4dgvTfGWqNsApSzfndlTiiSrv-hvjUc4TUujyNCOKvsnVuG7NB8s2rBA1wwEmV2LYFgsXT7OgV06QdNpOepQe-TvUIcEBIY8cQ7BO4qmaf6qy8bg" alt="Sweet Treat" />
+                    </div>
+                    <h4 class="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">Sweet Treats</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Mini fruit cup or a small vanilla milkshake.</p>
+                    <div class="text-primary font-bold text-lg">$4.99</div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 dark:text-gray-400 text-sm italic mb-6">
+                    All kids meals come with a choice of fries or apple slices, and a juice box.
+                </p>
+                <a href="menu.html" class="inline-flex items-center gap-2 text-primary font-bold text-lg hover:text-orange-600 transition-colors">
+                    View Full Menu <span class="material-icons">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESIGNED FOR MEMORIES ===== -->
+    <section class="py-16 bg-surface-light dark:bg-surface-dark transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:gap-12">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img class="rounded-2xl shadow-lg w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_zd3TsJGQ3vK3PRGAQ3f6SY3aKIt_E3CxLCGt7zikEWEyf4rA4GvfsYtC-CyFgCLplzchYQuWIZqrt-Htn23LzpVQCra7hpOOxAOM-yuIdhp2U1PpygbwzYHykIHJzvVFTwQgQwJbEFncbGguMx-ziVHCqpBBI_KvM8H0qH2OURY7vN8X_j57pXpGZmQILIJ57W1Fb7AvOg0MvVHv9nK-0aFebDvSD4RVqGGgIyZEYbX57JqgHC3bBLKF0GwmGgiLOca3l84Dmw" alt="Happy family dining" />
+                        <img class="rounded-2xl shadow-lg w-full h-48 object-cover mt-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBWteoPnW7iNZ8YvQwOSWTNOYeDO9zkb4pKf374G4sGFqSSq_bqanuXs2b2Cxi-xdlwZt356rLXRbUbcV-6l1sIEtHJ-2FOMZp5-nE8QOYPTm5jU6aetFJ19VYgRV5D05lB44UGUZ7mq1upidjMAN3zvNkYN-1S7mKXrxoYd7QL2d5Yu_7EEESu5xRGhAX_EloNcSKRXcJ1fhC8XYPFYhEs02P1aD2k6JSsBbrdPyLcml3SST7R3GeNm5bAra8miBHg0DDlbGfqA" alt="Kids eating healthy" />
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-display font-bold text-gray-900 dark:text-white mb-6">Designed for Memories</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6 font-light">
+                        At Arabella, we believe the best memories are made around the table. Our spacious booths, friendly staff, and welcoming atmosphere make it easy for families to relax and enjoy quality time together.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <span class="material-icons text-primary mr-3">check_circle</span>
+                            High chairs and booster seats available
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <span class="material-icons text-primary mr-3">check_circle</span>
+                            Fully wheelchair accessible — parking, entrance &amp; seating
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <span class="material-icons text-primary mr-3">check_circle</span>
+                            Free parking lot and street parking
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <span class="material-icons text-primary mr-3">check_circle</span>
+                            Dine-in, takeout, delivery &amp; curbside pickup
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400">
+                            <span class="material-icons text-primary mr-3">check_circle</span>
+                            100% Halal certified cuisine
+                        </li>
+                    </ul>
+                    <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors shadow-lg">
+                        Order Online <span class="material-icons text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-surface-dark text-white py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="media/Arabella_logo.png" alt="Arabella" class="h-10 w-auto rounded-lg" />
+                        <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly serving the Downey, CA community.</p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="family.html" class="hover:text-white transition-colors">Kids &amp; Family</a></li>
+                        <li><a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Order Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex justify-between"><span>Mon – Thu</span><span>11am – 9pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>11am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Sunday</span><span>12pm – 9pm</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Arabella Mediterranean Grill. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.querySelector('.material-icons').textContent = isOpen ? 'menu' : 'close';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arabella Mediterranean Grill — Downey, CA</title>
+    <meta name="description" content="Authentic Halal Mediterranean cuisine in Downey, CA. Charcoal-grilled meats, fresh appetizers, bowls, wraps & more. Dine-in, takeout, delivery & catering." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F97316",
+                        secondary: "#15803d",
+                        "bg-light": "#FDFBF7",
+                        "bg-dark": "#1C1917",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#292524",
+                        "txt-light": "#44403C",
+                        "txt-dark": "#E7E5E4",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+        .text-shadow { text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(249,115,22,0.08) 0%, transparent 50%, rgba(21,128,61,0.06) 100%);
+        }
+    </style>
+</head>
+<body class="bg-bg-light dark:bg-bg-dark text-txt-light dark:text-txt-dark font-body transition-colors duration-300">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed w-full z-50 bg-surface-light/90 dark:bg-bg-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-stone-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img src="media/Arabella_logo.png" alt="Arabella Mediterranean Grill" class="h-12 w-auto rounded-lg" />
+                    <!-- <span class="font-display font-bold text-xl sm:text-2xl tracking-wider text-gray-900 dark:text-white">ARABELLA</span> -->
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="menu.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Menu</a>
+                    <a href="family.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Kids &amp; Family</a>
+                    <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">Order Online</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
+                        <span class="material-icons text-gray-600 dark:text-gray-300 dark:hidden">dark_mode</span>
+                        <span class="material-icons text-gray-600 dark:text-gray-300 hidden dark:inline">light_mode</span>
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none" aria-label="Open menu">
+                    <span class="material-icons text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-stone-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Home</a>
+                <a href="menu.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Menu</a>
+                <a href="family.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Kids &amp; Family</a>
+                <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block bg-primary hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-bold shadow-lg">Order Online</a>
+                <button id="mobile-theme-toggle" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 py-2">
+                    <span class="material-icons">brightness_4</span>
+                    <span>Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="relative pt-20 flex items-center justify-center min-h-screen overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Mediterranean feast spread on a table" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFQlrEpb21lxkWxg1hJr_HJBHs-6h-w1Iwi47ZQEhUbnQp7-KJ8aYQkpZNlVnKEaB8NRPPTuw2nLGV205rjdGhGCO69PbF1TVPSQnaeZ0Q-LWpK9WHPqZjFkb9xlvdZETg8CXlNXPYmzWw8LDuvuF_4JO3cvEVfGp__JBAS8M6XjR0zYXjKsRR7H57Gm1xXOBNs47UjS0163x8DrcYYmRs6sqrwizVUUWWVHYo02RwcTnp0n064d9jzHKYrxkDqv1zYh9gvvmDEg" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-bg-light dark:to-bg-dark"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+            <div class="inline-block mb-6 px-5 py-2 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm">
+                <span class="text-white text-sm font-semibold tracking-widest uppercase">Mediterranean Grill &bull; Downey, CA</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-shadow">
+                Taste the Soul of the <br /> <span class="text-primary italic">Mediterranean</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light">
+                Authentic Halal cuisine crafted with passion. Experience the vibrant flavors of charcoal-grilled meats, fresh artisanal appetizers, and over 30 unique sides.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="menu.html" class="bg-primary hover:bg-orange-600 text-white text-lg px-8 py-3 rounded-full font-bold shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                    View Menu <span class="material-icons text-sm">restaurant_menu</span>
+                </a>
+                <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/40 text-white text-lg px-8 py-3 rounded-full font-bold shadow-xl transition-all flex items-center justify-center gap-2">
+                    Order Online <span class="material-icons text-sm">shopping_bag</span>
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <span class="material-icons text-white/60 text-3xl">expand_more</span>
+        </div>
+    </header>
+
+    <!-- ===== HALAL BADGE ===== -->
+    <section class="bg-secondary text-white py-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+            <span class="material-icons" style="font-size:12rem">verified</span>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+            <div class="flex items-center gap-6">
+                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-inner flex-shrink-0">
+                    <span class="font-display text-secondary font-bold text-3xl">حلال</span>
+                </div>
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-2">100% Halal Excellence</h2>
+                    <p class="text-green-100 max-w-md">We serve only the highest quality Zabiha Halal meats, prepared with strict adherence to tradition and purity.</p>
+                </div>
+            </div>
+            <div class="flex gap-8 text-center md:text-left border-t md:border-t-0 md:border-l border-green-400/30 pt-6 md:pt-0 md:pl-8">
+                <div>
+                    <span class="block text-3xl font-bold font-display">Premium</span>
+                    <span class="text-sm text-green-200 uppercase tracking-wider">Quality Ingredients</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-bold font-display">Artisanal</span>
+                    <span class="text-sm text-green-200 uppercase tracking-wider">Preparation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MENU HIGHLIGHTS ===== -->
+    <section class="py-20 bg-bg-light dark:bg-bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-primary font-bold text-xl uppercase tracking-widest mb-3">Start Fresh</h2>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Signature Appetizers</h3>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Falafel -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden relative">
+                        <img alt="Fresh Falafel Plate" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDscY68baCz3hoc8GumefOS1mnBvQe0EgRfnk9Fcon9fZfkTDHeYE4agmJ2TA2WZgfG6Fg05AXtKmdS55OGC854Umt21HMQrChBx37lQlp4WfsPOEPNNvYAO1Q0AE-kY2jxVp1E5vpMh63i7R1xjqIWagtXEpBj8Wg1oBAFPefAGJ0YErfgh7d8iip13ji7ABymp4ihw7YnId3yfVVX2eVQoTfGnGN13_0-D2fOM2NfMgoYGMp6Na3XoqbiPpEU3pmzARiB7D8STQ" />
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Seller</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Falafel</h4>
+                            <span class="text-primary font-bold text-lg">$10.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Golden fried chickpea patties with herbs and spices, served with tahini sauce.</p>
+                    </div>
+                </div>
+                <!-- Fried Cauliflower -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Fried Cauliflower" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoMltO_wgPaa8KsFPi3RXFTfu7TyY0IjMcqqncy2ve2eJzq8MYNSRB01kaKpDLyg8UEL3TGyEie-2AepvR37y9bP2M_iDTxnu9QMAGB2Y_GCmcB9Du2DGKipA0bcB2vL780KtlvH68wi17I4hL3KxFWg26BNjtYd1CiydNV5GysoKpPjzGPxTTBkve7qzsuM2ynM-3sFkUtRFCw3sBe1wcHC2BaOYg8iG57UJvs2pFtGcOCnwye8bI3zlHeZ8Jf03lAPQfS9w9hA" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Fried Cauliflower</h4>
+                            <span class="text-primary font-bold text-lg">$9.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Crispy florets seasoned with house spices and a squeeze of lemon.</p>
+                    </div>
+                </div>
+                <!-- Hummus with Beef -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Hummus with Beef" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_oFLNzypPwKYZGPKUHddEV3kDUw7JU5-G15h3xE0r6OuZe8gXNd1U_AKGI36IQeFRaBSPqJ5vbnOz3aNLdt8tJT7OszOMTu9Tel6EaDmG6ytyFWnuFqbG4nGC8ZgxOZA4Zu4-a-__DPx-8P4-Zk715Xej_8UPU5R0xFA8xauL6oCLMqW21Y20XIU0oqVwJHJPKpMb_VltmxQjoCeCFzFrQqJc91qEPWv8MAdfarubhOUx5liTfJo5Gkm2TybzOEKtDvEougv75g" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Hummus with Beef</h4>
+                            <span class="text-primary font-bold text-lg">$16.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Creamy house-made hummus topped with savory sautéed beef and pine nuts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="menu.html" class="inline-flex items-center gap-2 text-primary font-bold text-lg hover:text-orange-600 transition-colors">
+                    View Full Menu <span class="material-icons">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FROM THE GRILL ===== -->
+    <section class="py-20 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div>
+                    <h2 class="font-display text-4xl font-bold text-gray-900 dark:text-white">From The Grill</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">Served with rice or salad and fresh pita bread.</p>
+                </div>
+                <a href="menu.html" class="hidden md:inline-flex items-center text-primary font-bold hover:text-orange-600 transition-colors mt-4 md:mt-0">
+                    Full Menu <span class="material-icons ml-1">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
+                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                        <span class="material-icons text-3xl">kebab_dining</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Beef Kabob Plate</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tender marinated beef cubes char-grilled to perfection.</p>
+                    <span class="block font-bold text-primary text-lg">$24.99</span>
+                </div>
+                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
+                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                        <span class="material-icons text-3xl">restaurant</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Chicken Shawarma</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Thinly sliced marinated chicken roasted on a vertical spit.</p>
+                    <span class="block font-bold text-primary text-lg">$23.99</span>
+                </div>
+                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
+                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                        <span class="material-icons text-3xl">set_meal</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Salmon Plate</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Grilled salmon fillet served with rice and grilled veggies.</p>
+                    <span class="block font-bold text-primary text-lg">$22.99</span>
+                </div>
+                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
+                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+                        <span class="material-icons text-3xl">lunch_dining</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Lamb Chops Plate</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Succulent lamb chops seasoned and grilled to perfection.</p>
+                    <span class="block font-bold text-primary text-lg">$27.49</span>
+                </div>
+            </div>
+            <div class="md:hidden text-center mt-8">
+                <a href="menu.html" class="inline-flex items-center text-primary font-bold hover:text-orange-600 transition-colors">
+                    Full Menu <span class="material-icons ml-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY ARABELLA ===== -->
+    <section class="py-20 bg-bg-light dark:bg-bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Why Arabella?</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Rated 4.9 stars — a local favorite in Downey for fresh Mediterranean flavors and outstanding hospitality.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <span class="material-icons text-primary text-3xl">family_restroom</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Family Friendly</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Great for kids with a dedicated children's menu. High chairs and booster seats available.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <span class="material-icons text-secondary text-3xl">accessible</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Fully Accessible</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Wheelchair accessible parking, entrance, and seating for all guests.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <span class="material-icons text-primary text-3xl">local_parking</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Free Parking</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Complimentary parking lot and free street parking for your convenience.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-secondary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                        <span class="material-icons text-secondary text-3xl">delivery_dining</span>
+                    </div>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Delivery &amp; Pickup</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Dine-in, takeout, delivery, and curbside pickup to fit any schedule.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISIT / LOCATION ===== -->
+    <section class="relative py-20 bg-surface-light dark:bg-surface-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-secondary rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-10 md:p-12 text-white flex flex-col justify-center">
+                    <h2 class="font-display text-4xl font-bold mb-6">Visit Arabella</h2>
+                    <p class="text-green-100 mb-8 text-lg">Experience our warm hospitality and vibrant, clean atmosphere. Perfect for family dinners, quick lunches, or special celebrations.</p>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-300">location_on</span>
+                            <div>
+                                <p class="font-bold">Downey, CA</p>
+                                <p class="text-green-100 text-sm">Serving the Downey community</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-300">schedule</span>
+                            <div>
+                                <p class="font-bold">Open Daily</p>
+                                <p class="text-green-100 text-sm">Mon–Thu 11am–9pm &bull; Fri–Sat 11am–10pm &bull; Sun 12pm–9pm</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-icons text-green-300">restaurant</span>
+                            <div>
+                                <p class="font-bold">Dine-In &bull; Takeout &bull; Delivery</p>
+                                <p class="text-green-100 text-sm">Curbside pickup also available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
+                            Order Online <span class="material-icons text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 h-72 md:h-auto relative">
+                    <img alt="Arabella Mediterranean Grill interior" class="w-full h-full object-cover" src="media/restaurant-inside-picture.PNG" />
+                    <div class="absolute inset-0 bg-secondary/10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-surface-dark text-white py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="media/Arabella_logo.png" alt="Arabella" class="h-10 w-auto rounded-lg" />
+                        <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly serving the Downey, CA community.</p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="family.html" class="hover:text-white transition-colors">Kids &amp; Family</a></li>
+                        <li><a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Order Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex justify-between"><span>Mon – Thu</span><span>11am – 9pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>11am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Sunday</span><span>12pm – 9pm</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Arabella Mediterranean Grill. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.querySelector('.material-icons').textContent = isOpen ? 'menu' : 'close';
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Menu — Arabella Mediterranean Grill</title>
+    <meta name="description" content="Browse the full menu at Arabella Mediterranean Grill. Appetizers, plates, bowls, wraps, salads, kids menu & more. 100% Halal." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#F97316",
+                        secondary: "#15803d",
+                        "bg-light": "#FDFBF7",
+                        "bg-dark": "#1C1917",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#292524",
+                        "txt-light": "#44403C",
+                        "txt-dark": "#E7E5E4",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #F97316; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-bg-light dark:bg-bg-dark text-txt-light dark:text-txt-dark font-body transition-colors duration-300">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="fixed w-full z-50 bg-surface-light/90 dark:bg-bg-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-stone-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <img src="media/Arabella_logo.png" alt="Arabella Mediterranean Grill" class="h-12 w-auto rounded-lg" />
+                    <!-- <span class="font-display font-bold text-xl sm:text-2xl tracking-wider text-gray-900 dark:text-white">ARABELLA</span> -->
+                </a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="menu.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Menu</a>
+                    <a href="family.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Kids &amp; Family</a>
+                    <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">Order Online</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
+                        <span class="material-icons text-gray-600 dark:text-gray-300 dark:hidden">dark_mode</span>
+                        <span class="material-icons text-gray-600 dark:text-gray-300 hidden dark:inline">light_mode</span>
+                    </button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none" aria-label="Open menu">
+                    <span class="material-icons text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-stone-700">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Home</a>
+                <a href="menu.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Menu</a>
+                <a href="family.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Kids &amp; Family</a>
+                <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block bg-primary hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-bold shadow-lg">Order Online</a>
+                <button id="mobile-theme-toggle" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 py-2">
+                    <span class="material-icons">brightness_4</span>
+                    <span>Toggle Theme</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO / HEADER ===== -->
+    <header class="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 mb-6">
+                <span class="material-icons text-sm">verified</span>
+                <span class="text-xs font-bold tracking-wider uppercase">100% Halal Certified</span>
+            </div>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                Our <span class="text-primary italic">Menu</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-light mb-8">
+                Fresh Mediterranean cuisine, crafted with authentic spices. From sizzling kabobs to zesty tabbouleh — something for everyone.
+            </p>
+            <!-- Category Quick Nav -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+                <a href="#hot-appetizers" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Hot Appetizers</a>
+                <a href="#cold-appetizers" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Cold Appetizers</a>
+                <a href="#salads" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Salads</a>
+                <a href="#wraps" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Wraps</a>
+                <a href="#bowls" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Bowls</a>
+                <a href="#plates" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Plates</a>
+                <a href="#tawagen" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Tawagen</a>
+                <a href="#kids" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Kids</a>
+                <a href="#extras" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Extras</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-20">
+
+        <!-- ==================== HOT APPETIZERS ==================== -->
+        <section class="scroll-mt-28" id="hot-appetizers">
+            <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Hot Appetizers</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Starters</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Falafel</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Ground chickpeas, parsley, onions &amp; spices, deep fried</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$10.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Foul (Beans)</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Slow-cooked fava beans with olive oil &amp; spices</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$8.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Fried Cauliflower</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Fresh cauliflower florets fried until golden</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$9.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Hummus with Chicken</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Creamy hummus topped with spiced chicken shawarma</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$14.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Hummus with Beef</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Creamy hummus topped with savory sautéed beef</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$16.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Coriander Potatoes</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Seasoned potato bites with fresh coriander</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$8.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Fries</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">House seasoning, lemon pepper, or plain</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$5.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Grilled Halloumi Cheese</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Authentic Cypriot cheese grilled to perfection</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$11.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Eggs</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Boiled, fried, or omelette</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$9.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Spinach &amp; Cheese Triangle</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Flaky pastry stuffed with spinach &amp; cheese</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Sombosa</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Crispy pastry with savory filling</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Cheese Roll</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Crispy pastry filled with a savory cheese blend</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Kibbeh</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Cracked wheat shells stuffed with ground meat &amp; pine nuts</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Mix Pastry</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Assortment of spinach triangles, sombosa &amp; rolls</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$12.99</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">restaurant_menu</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== COLD APPETIZERS ==================== -->
+        <section class="scroll-mt-28" id="cold-appetizers">
+            <div class="flex items-baseline justify-between border-b-2 border-secondary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Cold Appetizers</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Mezza</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Hummus</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Classic creamy chickpea dip with olive oil</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Spicy Hummus</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Hummus topped with caramelized onions &amp; spice</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Baba Ganoush</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Roasted eggplant dip with tahini &amp; garlic</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$11.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Grape Leaves (Dolma)</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Stuffed with rice &amp; herbs</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$12.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Labneh</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Thick strained yogurt with olive oil</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$6.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Tzatziki</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Creamy yogurt with cucumber &amp; garlic</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$5.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Cheese</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Mediterranean cheese plate</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$5.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Tourshi</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Mixed pickles &amp; turnips</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$6.99</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">eco</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== SALADS ==================== -->
+        <section class="scroll-mt-28" id="salads">
+            <div class="flex items-baseline justify-between border-b-2 border-secondary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Fresh Salads</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Greens</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-semibold text-gray-800 dark:text-gray-100">Fattoush</h3>
+                        <span class="text-secondary font-bold">$11.99</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Mixed greens, radish, tomato, cucumber, toasted pita, pomegranate molasses</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-semibold text-gray-800 dark:text-gray-100">Tabouleh</h3>
+                        <span class="text-secondary font-bold">$11.99</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Finely chopped parsley, mint, tomato, onion, bulgur, olive oil &amp; lemon</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-semibold text-gray-800 dark:text-gray-100">Greek Salad</h3>
+                        <span class="text-secondary font-bold">$12.99</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Romaine, cucumber, tomato, olives, feta cheese, oregano vinaigrette</p>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-semibold text-gray-800 dark:text-gray-100">Salad with Chicken</h3>
+                        <span class="text-secondary font-bold">$17.99</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Your choice of salad topped with marinated grilled chicken breast</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">lunch_dining</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== WRAPS & BOWLS ==================== -->
+        <section class="scroll-mt-28" id="wraps">
+            <div class="text-center mb-10">
+                <h2 class="font-display text-4xl font-bold text-gray-900 dark:text-white mb-3">Wraps &amp; Bowls</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Choose your style. Served with fresh pita bread and garlic sauce.</p>
+            </div>
+            <div class="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-xl overflow-hidden border border-gray-100 dark:border-stone-700">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Wraps Column -->
+                    <div class="p-8 md:p-10 border-b md:border-b-0 md:border-r border-gray-100 dark:border-stone-700">
+                        <div class="flex items-center gap-3 mb-8">
+                            <span class="material-icons text-primary text-3xl">lunch_dining</span>
+                            <h3 class="font-display text-3xl font-bold text-gray-800 dark:text-gray-100">Wraps</h3>
+                        </div>
+                        <div class="space-y-5">
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Beef Shawarma</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Thinly sliced marinated beef</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Beef Kabob</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Char-grilled beef cubes</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Tarb Kafta</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Ground meat skewer</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$12.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Kofta Kabob</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Seasoned ground meat skewer</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Chicken Kabob</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Grilled chicken cubes</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Chicken Shawarma</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Roasted chicken with garlic sauce</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Gyros</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Classic gyro wrap</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Lamb</h4>
+                                    <p class="text-xs text-gray-400 mt-1">Tender lamb wrap</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Falafel Wrap</h4>
+                                    <p class="text-xs text-secondary mt-1 font-bold uppercase">Vegetarian</p>
+                                </div>
+                                <span class="font-bold text-gray-900 dark:text-white bg-gray-100 dark:bg-stone-700 px-3 py-1 rounded-lg text-sm">$9.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bowls Column -->
+                    <div class="p-8 md:p-10 bg-gray-50/50 dark:bg-stone-800/30" id="bowls">
+                        <div class="flex items-center gap-3 mb-8">
+                            <span class="material-icons text-primary text-3xl">rice_bowl</span>
+                            <h3 class="font-display text-3xl font-bold text-gray-800 dark:text-gray-100">Bowls</h3>
+                        </div>
+                        <div class="space-y-5">
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Beef Shawarma Bowl</h4>
+                                <span class="font-bold text-primary">$13.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Beef Kabob Bowl</h4>
+                                <span class="font-bold text-primary">$13.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Kafta Bowl</h4>
+                                <span class="font-bold text-primary">$12.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Chicken Kabob Bowl</h4>
+                                <span class="font-bold text-primary">$11.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Chicken Shawarma Bowl</h4>
+                                <span class="font-bold text-primary">$12.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Shrimp Bowl</h4>
+                                <span class="font-bold text-primary">$13.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Salmon Bowl</h4>
+                                <span class="font-bold text-primary">$13.99</span>
+                            </div>
+                            <div class="flex items-center justify-between group">
+                                <h4 class="font-bold text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">Lamb Kabob Bowl</h4>
+                                <span class="font-bold text-primary">$13.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">local_fire_department</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== PLATES ==================== -->
+        <section class="scroll-mt-28" id="plates">
+            <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-4">
+                <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Plates</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Entrées</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 mb-8">All plates served with rice, salad &amp; fresh pita bread.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Beef Kabob Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$24.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Beef Shawarma Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$24.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Kafta Kabob Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Tarb Kafta Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$24.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Hawoshi Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$13.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Mansaf Beef Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Full Chicken Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$26.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Chicken Kabob Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Grilled Garlic Chicken Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Mansaf Chicken Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Mixed Kabob Plate <span class="text-xs text-gray-400">(3 Skewer)</span></h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$27.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Mixed Shawarma Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Chicken Shawarma Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Chicken &amp; Beef Kabob</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Salmon &amp; Shrimp</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$24.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Lamb Shank Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$24.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Lamb Kabob Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Lamb Chops Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$27.49</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Salmon Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Shrimp Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Gyros Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Veggie Plate</h3>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">soup_kitchen</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== TAWAGEN ==================== -->
+        <section class="scroll-mt-28" id="tawagen">
+            <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Tawagen</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Stews</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Tawagen Bamia with Meat</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Okra stew with tender meat</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$22.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Tawagen Beef with Onion</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Slow-cooked beef with caramelized onions</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Tawagen Bisallah with Meat</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Pea stew with seasoned meat</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$23.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Tawagen Potatoes with Meat</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Hearty potato stew with tender meat</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">$21.99</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">child_care</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== KIDS MENU ==================== -->
+        <section class="scroll-mt-28" id="kids">
+            <div class="flex items-baseline justify-between border-b-2 border-secondary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Kids Menu</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Little Ones</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Chicken Sandwich</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Grilled chicken in a soft bun</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$9.99</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-secondary transition-colors">Fried Chicken Strips</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Crispy golden chicken strips kids love</p>
+                    </div>
+                    <span class="font-bold text-secondary ml-4 whitespace-nowrap">$12.99</span>
+                </div>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-6 italic">See our <a href="family.html" class="text-primary hover:underline font-semibold">Kids &amp; Family page</a> for family trays and more options.</p>
+        </section>
+
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">add_circle</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== EXTRAS ==================== -->
+        <section class="scroll-mt-28" id="extras">
+            <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Extras</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Sides &amp; More</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Lentil Soup</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Warm, hearty lentil soup</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">By Request</span>
+                </div>
+                <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
+                    <div>
+                        <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Family Tray</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Large portions for the whole family</p>
+                    </div>
+                    <span class="font-bold text-primary ml-4 whitespace-nowrap">By Request</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ORDER CTA ===== -->
+        <section class="bg-primary rounded-3xl p-10 md:p-16 text-center text-white shadow-2xl">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>
+            <p class="text-orange-100 mb-8 text-lg max-w-xl mx-auto">Skip the line and order online for pickup or delivery. Fresh Mediterranean flavors at your doorstep.</p>
+            <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg">
+                Order Online Now <span class="material-icons">arrow_forward</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-surface-dark text-white py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="media/Arabella_logo.png" alt="Arabella" class="h-10 w-auto rounded-lg" />
+                        <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly serving the Downey, CA community.</p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="family.html" class="hover:text-white transition-colors">Kids &amp; Family</a></li>
+                        <li><a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Order Online</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex justify-between"><span>Mon – Thu</span><span>11am – 9pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>11am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Sunday</span><span>12pm – 9pm</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Arabella Mediterranean Grill. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.querySelector('.material-icons').textContent = isOpen ? 'menu' : 'close';
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
+            });
+        });
+    </script>
+</body>
+</html>
