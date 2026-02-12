@@ -217,7 +217,7 @@
                 <!-- Falafel -->
                 <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
                     <div class="h-64 overflow-hidden relative">
-                        <img alt="Fresh Falafel Plate" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDscY68baCz3hoc8GumefOS1mnBvQe0EgRfnk9Fcon9fZfkTDHeYE4agmJ2TA2WZgfG6Fg05AXtKmdS55OGC854Umt21HMQrChBx37lQlp4WfsPOEPNNvYAO1Q0AE-kY2jxVp1E5vpMh63i7R1xjqIWagtXEpBj8Wg1oBAFPefAGJ0YErfgh7d8iip13ji7ABymp4ihw7YnId3yfVVX2eVQoTfGnGN13_0-D2fOM2NfMgoYGMp6Na3XoqbiPpEU3pmzARiB7D8STQ" />
+                        <img alt="Fresh Falafel Plate" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/falafel.png" />
                         <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Best Seller</div>
                     </div>
                     <div class="p-6">
@@ -228,17 +228,17 @@
                         <p class="text-gray-600 dark:text-gray-400 text-sm">Golden fried chickpea patties with herbs and spices, served with tahini sauce.</p>
                     </div>
                 </div>
-                <!-- Fried Cauliflower -->
+                <!-- Fatoush Salad -->
                 <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
                     <div class="h-64 overflow-hidden">
-                        <img alt="Fried Cauliflower" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoMltO_wgPaa8KsFPi3RXFTfu7TyY0IjMcqqncy2ve2eJzq8MYNSRB01kaKpDLyg8UEL3TGyEie-2AepvR37y9bP2M_iDTxnu9QMAGB2Y_GCmcB9Du2DGKipA0bcB2vL780KtlvH68wi17I4hL3KxFWg26BNjtYd1CiydNV5GysoKpPjzGPxTTBkve7qzsuM2ynM-3sFkUtRFCw3sBe1wcHC2BaOYg8iG57UJvs2pFtGcOCnwye8bI3zlHeZ8Jf03lAPQfS9w9hA" />
+                        <img alt="Fatoush Salad at Arabella Mediterranean Grill" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/fattoush_salad.JPEG" />
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-baseline mb-2">
-                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Fried Cauliflower</h4>
-                            <span class="text-primary font-bold text-lg">$9.99</span>
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Fatoush Salad</h4>
+                            <span class="text-primary font-bold text-lg">$11.99</span>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm">Crispy florets seasoned with house spices and a squeeze of lemon.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Crispy pita chips tossed with fresh greens, tomatoes, cucumbers, and tangy sumac dressing.</p>
                     </div>
                 </div>
                 <!-- Hummus with Beef -->
@@ -645,10 +645,18 @@
                 </div>
             </div>
             <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 Arabella Mediterranean Grill. All rights reserved.</p>
+                <p>&copy; 2026 Arabella Mediterranean Grill. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+        <button id="lightbox-close" class="absolute top-4 right-4 z-10 text-white/80 hover:text-white transition-colors" aria-label="Close lightbox">
+            <span class="material-icons text-4xl">close</span>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300" />
+    </div>
 
     <!-- ===== SCRIPTS ===== -->
     <script>
@@ -733,6 +741,65 @@
             updateDots();
             resetAutoplay();
         })();
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            requestAnimationFrame(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.remove('flex');
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Food card images (appetizers + grill sections)
+        document.querySelectorAll('.h-64.overflow-hidden img, .h-48.overflow-hidden img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(img.src, img.alt);
+            });
+        });
+
+        // Guest photos carousel images
+        document.querySelectorAll('#carousel-track img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openLightbox(img.src, img.alt);
+            });
+        });
+
+        // Close on overlay click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        });
     </script>
 </body>
 </html>
