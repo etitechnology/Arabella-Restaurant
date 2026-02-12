@@ -246,7 +246,7 @@
 
                 <!-- Error Message (hidden by default) -->
                 <div id="error-msg" class="hidden mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-600 dark:text-red-400 text-sm text-center">
-                    Something went wrong. Please call us at <a href="tel:+15624413467" class="font-bold underline">(562) 441-3467</a> or try again.
+                    Something went wrong. Please call us at <a href="tel:+15624193125" class="font-bold underline">(562) 419-3125</a> or try again.
                 </div>
             </div>
         </div>
@@ -326,18 +326,25 @@
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+            errorMsg.classList.add('hidden');
 
             // Verify reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                errorMsg.textContent = 'Please complete the reCAPTCHA verification.';
+            try {
+                const recaptchaResponse = grecaptcha.getResponse();
+                if (!recaptchaResponse) {
+                    errorMsg.innerHTML = 'Please complete the reCAPTCHA verification.';
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
+            } catch (err) {
+                console.error('reCAPTCHA not loaded:', err);
+                errorMsg.innerHTML = 'reCAPTCHA failed to load. Please refresh the page and try again.';
                 errorMsg.classList.remove('hidden');
                 return;
             }
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="material-icons animate-spin">autorenew</span> Sending...';
-            errorMsg.classList.add('hidden');
 
             const params = {
                 name: document.getElementById('name').value,
@@ -348,6 +355,7 @@
                 time: document.getElementById('time').value || 'Not specified',
                 event_type: document.getElementById('event-type').value || 'Not specified',
                 message: document.getElementById('message').value || 'No additional details',
+                'g-recaptcha-response': grecaptcha.getResponse(),
             };
 
             try {
@@ -361,7 +369,9 @@
                 successMsg.classList.remove('hidden');
             } catch (error) {
                 console.error('EmailJS error:', error);
+                errorMsg.innerHTML = 'Something went wrong. Please call us at <a href="tel:+15624193125" class="font-bold underline">(562) 419-3125</a> or try again.';
                 errorMsg.classList.remove('hidden');
+                grecaptcha.reset();
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<span class="material-icons">send</span> Send Catering Request';
             }
