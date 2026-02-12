@@ -3,8 +3,63 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arabella Mediterranean Grill — Downey, CA</title>
-    <meta name="description" content="Authentic Halal Mediterranean cuisine in Downey, CA. Charcoal-grilled meats, fresh appetizers, bowls, wraps & more. Dine-in, takeout, delivery & catering." />
+    <link rel="icon" type="image/png" href="media/Arabella_icon.png" />
+    <title>Arabella Mediterranean Grill - Restaurant in Downey, CA</title>
+    <meta name="description" content="Arabella Mediterranean Grill, rated 4.9 stars on Google. Authentic Halal Mediterranean cuisine in Downey, CA. Charcoal-grilled kabobs, shawarma, falafel, lamb chops, bowls, wraps & 30+ sides. Dine-in, takeout & catering." />
+    <meta name="keywords" content="Mediterranean restaurant Downey, Halal restaurant Downey CA, Mediterranean food near me, best Mediterranean food Los Angeles, Halal food Downey, shawarma Downey, kabob restaurant Downey, Mediterranean grill Downey CA, lamb chops Downey, falafel Downey CA, Mediterranean catering Los Angeles, Halal Mediterranean food LA, Greek food Downey, Middle Eastern food Downey CA, Mediterranean restaurant near me, Halal restaurant near me, Mediterranean restaurant Orange County, best shawarma Los Angeles, Mediterranean bowl Downey, Arabella Mediterranean Grill, Mediterranean restaurant LA" />
+    <meta property="og:title" content="Arabella Mediterranean Grill, Downey, CA" />
+    <meta property="og:description" content="Rated 4.9 stars. Authentic Halal Mediterranean cuisine - charcoal-grilled kabobs, shawarma, falafel & more. Dine-in, takeout & catering." />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:image" content="media/Arabella_logo_white_background.png" />
+    <meta property="og:url" content="index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arabella Mediterranean Grill - Downey, CA" />
+    <meta name="twitter:description" content="Rated 4.9 stars. Authentic Halal Mediterranean cuisine in Downey, CA." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="index.html" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Arabella Mediterranean Grill",
+        "image": "media/Arabella_logo_white_background.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9085 Imperial Hwy",
+            "addressLocality": "Downey",
+            "addressRegion": "CA",
+            "postalCode": "90242",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.9170972,
+            "longitude": -118.134737
+        },
+        "url": "index.html",
+        "telephone": "+1-562-441-3467",
+        "servesCuisine": ["Mediterranean", "Halal", "Middle Eastern", "Greek"],
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "22:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:30", "closes": "00:00"}
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "60",
+            "bestRating": "5"
+        },
+        "hasMenu": "menu.html",
+        "acceptsReservations": "false",
+        "paymentAccepted": "Cash, Credit Card",
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Wheelchair Accessible", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Free Parking", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Takeout", "value": true}
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,6 +112,8 @@
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
                     <a href="menu.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Menu</a>
+                    <a href="catering.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Catering</a>
+                    <a href="directions.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Find Us</a>
                     <a href="family.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Kids &amp; Family</a>
                     <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">Order Online</a>
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
@@ -74,6 +131,8 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Home</a>
                 <a href="menu.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Menu</a>
+                <a href="catering.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Catering</a>
+                <a href="directions.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Find Us</a>
                 <a href="family.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Kids &amp; Family</a>
                 <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block bg-primary hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-bold shadow-lg">Order Online</a>
                 <button id="mobile-theme-toggle" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 py-2">
@@ -87,18 +146,22 @@
     <!-- ===== HERO ===== -->
     <header class="relative pt-20 flex items-center justify-center min-h-screen overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img alt="Mediterranean feast spread on a table" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFQlrEpb21lxkWxg1hJr_HJBHs-6h-w1Iwi47ZQEhUbnQp7-KJ8aYQkpZNlVnKEaB8NRPPTuw2nLGV205rjdGhGCO69PbF1TVPSQnaeZ0Q-LWpK9WHPqZjFkb9xlvdZETg8CXlNXPYmzWw8LDuvuF_4JO3cvEVfGp__JBAS8M6XjR0zYXjKsRR7H57Gm1xXOBNs47UjS0163x8DrcYYmRs6sqrwizVUUWWVHYo02RwcTnp0n064d9jzHKYrxkDqv1zYh9gvvmDEg" />
+            <img alt="Mediterranean feast spread on a table at Arabella Mediterranean Grill" class="w-full h-full object-cover" src="media/food/full_table_spread.png" />
             <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-bg-light dark:to-bg-dark"></div>
         </div>
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
             <div class="inline-block mb-6 px-5 py-2 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm">
                 <span class="text-white text-sm font-semibold tracking-widest uppercase">Mediterranean Grill &bull; Downey, CA</span>
             </div>
-            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-shadow">
+            <!-- <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-shadow">
                 Taste the Soul of the <br /> <span class="text-primary italic">Mediterranean</span>
+            </h1> -->
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight text-shadow">
+                Authentic Flavor<br /> <span class="text-primary italic">Grilled to Perfection</span>
             </h1>
+            <!-- Authentic Flavor. Grilled to Perfection. -->
             <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light">
-                Authentic Halal cuisine crafted with passion. Experience the vibrant flavors of charcoal-grilled meats, fresh artisanal appetizers, and over 30 unique sides.
+                Mediterranean Halal cuisine crafted with passion. Experience the vibrant flavors of charcoal-grilled meats, fresh appetizers, and unique sides.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="menu.html" class="bg-primary hover:bg-orange-600 text-white text-lg px-8 py-3 rounded-full font-bold shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2">
@@ -181,7 +244,7 @@
                 <!-- Hummus with Beef -->
                 <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
                     <div class="h-64 overflow-hidden">
-                        <img alt="Hummus with Beef" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_oFLNzypPwKYZGPKUHddEV3kDUw7JU5-G15h3xE0r6OuZe8gXNd1U_AKGI36IQeFRaBSPqJ5vbnOz3aNLdt8tJT7OszOMTu9Tel6EaDmG6ytyFWnuFqbG4nGC8ZgxOZA4Zu4-a-__DPx-8P4-Zk715Xej_8UPU5R0xFA8xauL6oCLMqW21Y20XIU0oqVwJHJPKpMb_VltmxQjoCeCFzFrQqJc91qEPWv8MAdfarubhOUx5liTfJo5Gkm2TybzOEKtDvEougv75g" />
+                        <img alt="Hummus with Beef at Arabella Mediterranean Grill" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/hummus_with_beef.JPEG" />
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-baseline mb-2">
@@ -189,6 +252,45 @@
                             <span class="text-primary font-bold text-lg">$16.99</span>
                         </div>
                         <p class="text-gray-600 dark:text-gray-400 text-sm">Creamy house-made hummus topped with savory sautéed beef and pine nuts.</p>
+                    </div>
+                </div>
+                <!-- Kibbeh -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Kibbeh appetizer at Arabella Mediterranean Grill" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/kibbeh_appetizer_plate.JPEG" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Kibbeh</h4>
+                            <span class="text-primary font-bold text-lg">$11.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Cracked wheat shells stuffed with ground meat &amp; pine nuts, fried golden.</p>
+                    </div>
+                </div>
+                <!-- Spinach & Cheese Triangle -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Spinach and cheese triangle pastries at Arabella" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/spinach_cheese_triangle_appetizer_or_sambosa.JPEG" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Spinach &amp; Cheese Triangle</h4>
+                            <span class="text-primary font-bold text-lg">$11.99</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Flaky pastry stuffed with spinach and a savory cheese blend.</p>
+                    </div>
+                </div>
+                <!-- Coriander Potatoes -->
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Coriander potatoes at Arabella Mediterranean Grill" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/coriander_potatoes.JPEG" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-baseline mb-2">
+                            <h4 class="font-display text-xl font-bold text-gray-900 dark:text-white">Coriander Potatoes</h4>
+                            <span class="text-primary font-bold text-lg">$8.49</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Seasoned potato bites with fresh coriander and Mediterranean spices.</p>
                     </div>
                 </div>
             </div>
@@ -213,37 +315,45 @@
                 </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
-                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                        <span class="material-icons text-3xl">kebab_dining</span>
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-all overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Beef Kabob Plate at Arabella" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/beef_kabob_plate.JPEG" />
                     </div>
-                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Beef Kabob Plate</h4>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Tender marinated beef cubes char-grilled to perfection.</p>
-                    <span class="block font-bold text-primary text-lg">$24.99</span>
+                    <div class="p-5 text-center">
+                        <h4 class="font-display font-bold text-lg mb-1 text-gray-900 dark:text-white">Beef Kabob Plate</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Tender marinated beef cubes char-grilled to perfection.</p>
+                        <span class="block font-bold text-primary text-lg">$24.99</span>
+                    </div>
                 </div>
-                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
-                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                        <span class="material-icons text-3xl">restaurant</span>
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-all overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Chicken Shawarma Plate at Arabella" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/chicken_shawarma_plate.JPEG" />
                     </div>
-                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Chicken Shawarma</h4>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Thinly sliced marinated chicken roasted on a vertical spit.</p>
-                    <span class="block font-bold text-primary text-lg">$23.99</span>
+                    <div class="p-5 text-center">
+                        <h4 class="font-display font-bold text-lg mb-1 text-gray-900 dark:text-white">Chicken Shawarma</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Thinly sliced marinated chicken roasted on a vertical spit.</p>
+                        <span class="block font-bold text-primary text-lg">$23.99</span>
+                    </div>
                 </div>
-                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
-                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                        <span class="material-icons text-3xl">set_meal</span>
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-all overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Salmon Plate at Arabella" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/salmon_plate.JPEG" />
                     </div>
-                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Salmon Plate</h4>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Grilled salmon fillet served with rice and grilled veggies.</p>
-                    <span class="block font-bold text-primary text-lg">$22.99</span>
+                    <div class="p-5 text-center">
+                        <h4 class="font-display font-bold text-lg mb-1 text-gray-900 dark:text-white">Salmon Plate</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Grilled salmon fillet served with rice and grilled veggies.</p>
+                        <span class="block font-bold text-primary text-lg">$22.99</span>
+                    </div>
                 </div>
-                <div class="bg-bg-light dark:bg-bg-dark p-6 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-colors text-center group">
-                    <div class="w-20 h-20 bg-orange-100 dark:bg-stone-800 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                        <span class="material-icons text-3xl">lunch_dining</span>
+                <div class="group bg-bg-light dark:bg-bg-dark rounded-2xl border border-gray-200 dark:border-stone-700 hover:border-primary dark:hover:border-primary transition-all overflow-hidden shadow-md hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img alt="Kafta Kabob Plate at Arabella" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="media/food/kafta_kabob_plate.JPEG" />
                     </div>
-                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Lamb Chops Plate</h4>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Succulent lamb chops seasoned and grilled to perfection.</p>
-                    <span class="block font-bold text-primary text-lg">$27.49</span>
+                    <div class="p-5 text-center">
+                        <h4 class="font-display font-bold text-lg mb-1 text-gray-900 dark:text-white">Kafta Kabob Plate</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Seasoned ground meat skewer grilled over charcoal.</p>
+                        <span class="block font-bold text-primary text-lg">$23.99</span>
+                    </div>
                 </div>
             </div>
             <div class="md:hidden text-center mt-8">
@@ -254,12 +364,174 @@
         </div>
     </section>
 
+    <!-- ===== REVIEWS ===== -->
+    <section class="py-20 bg-bg-light dark:bg-bg-dark" id="reviews">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-primary font-bold text-xl uppercase tracking-widest mb-3">Loved by Locals</h2>
+                <h3 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">What Our Guests Say</h3>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Rating Badges -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
+                <a href="https://maps.app.goo.gl/1zV81nVUk9q9Mu8U8" target="_blank" rel="noopener noreferrer" class="bg-surface-light dark:bg-surface-dark p-6 rounded-2xl border border-gray-100 dark:border-stone-700 shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center group">
+                    <img src="media/Google_Maps_Logo_2020.svg.png" alt="Google Maps" class="h-8 mb-3 object-contain" />
+                    <div class="text-4xl font-bold text-gray-900 dark:text-white mb-1">4.9<span class="text-xl text-gray-400 font-normal"> / 5</span></div>
+                    <div class="flex text-primary mb-2">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">60+ verified reviews</p>
+                    <span class="mt-2 text-primary text-xs font-bold uppercase tracking-wider group-hover:underline">Read on Google &rarr;</span>
+                </a>
+                <a href="https://www.yelp.com/biz/arabella-mediterranean-grill-downey-3" target="_blank" rel="noopener noreferrer" class="bg-surface-light dark:bg-surface-dark p-6 rounded-2xl border border-gray-100 dark:border-stone-700 shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center group">
+                    <img src="media/Yelp_Logo.svg.png" alt="Yelp" class="h-8 mb-3 object-contain" />
+                    <div class="text-4xl font-bold text-gray-900 dark:text-white mb-1">4.5<span class="text-xl text-gray-400 font-normal"> / 5</span></div>
+                    <div class="flex text-red-500 mb-2">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star_half</span>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">30+ reviews</p>
+                    <span class="mt-2 text-red-500 text-xs font-bold uppercase tracking-wider group-hover:underline">Read on Yelp &rarr;</span>
+                </a>
+            </div>
+
+            <!-- Review Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Review 1 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "The lamb chops are absolutely outstanding. Cooked to perfection, they are a must-try dish that will keep you coming back. The customer service is friendly and kind. Arabella provides the complete package: incredible food, excellent service, and a pleasant atmosphere."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">HG</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Hungry Gordito</p>
+                            <p class="text-xs text-gray-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "Everything is clean and there is parking. Service was friendly and helpful. The food came out hot, fresh, and delicious. The chicken was tender and moist. This place is one of the most flavorful Mediterranean spots in the area. We will be back again."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 font-bold text-sm">VD</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Valerie D.</p>
+                            <p class="text-xs text-gray-400">Yelp &bull; Downey, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "I tried the shawarma plate, gyro plate, and a hawawshy and everything was amazing. The flavors were rich and authentic, the portions generous, and every item cooked to perfection. The staff went out of their way to be welcoming."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">RA</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Raffi A.</p>
+                            <p class="text-xs text-gray-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 4 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "Been coming here often since they have opened. Have tried many different dishes and they are all a hit. Chicken is really juicy and tender. Beef smells amazing and the garlic sauce is incredible! Service is always great."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">MV</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Mathew V.</p>
+                            <p class="text-xs text-gray-400">Google Review</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 5 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "Food is so flavorful and warm. Every bite was an explosion of flavor. Welcoming presence with a calm ambiance. Love the interior design and the place was clean. A lot to choose from looking forward to trying more on the menu!"
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 font-bold text-sm">NC</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Nicholas C.</p>
+                            <p class="text-xs text-gray-400">Yelp &bull; Downey, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 6 -->
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-md border border-gray-100 dark:border-stone-700">
+                    <div class="flex text-primary text-sm mb-4">
+                        <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
+                    </div>
+                    <blockquote class="font-display text-lg italic text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        "Best food I've ever tasted. We ordered beef kabob, kofta, hawashy, lamb chops, and fries. They all taste so good and were so fresh. I really recommend this place, it's one of the top Mediterranean restaurants in SoCal."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">MH</div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-800 dark:text-gray-200">Michael H.</p>
+                            <p class="text-xs text-gray-400">Google Local Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guest Photos Carousel -->
+            <div>
+                <h3 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">Guest Photos</h3>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="overflow-hidden rounded-2xl shadow-lg">
+                        <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out">
+                            <img src="media/guest-photos/gp1.jpg" alt="Lamb chops plate with rice and hummus at Arabella" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp2.jpg" alt="Hawawshy sandwich at Arabella Mediterranean Grill" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp3.jpg" alt="Mixed grill kabobs platter with onions" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp4.jpg" alt="Grilled lamb chops with hummus and labneh" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp5.jpg" alt="Chicken kabob plate with rice and hummus" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp6.jpg" alt="Chicken platter with hummus at Arabella" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp7.jpg" alt="Fresh falafel plate with pickled vegetables" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp8.jpg" alt="Garlic chicken plate with rice and salad" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                            <img src="media/guest-photos/gp9.jpg" alt="Mixed kabob plate with hummus and salad at Arabella Downey" class="w-full flex-shrink-0 h-72 sm:h-96 object-cover" />
+                        </div>
+                    </div>
+                    <!-- Prev / Next Buttons -->
+                    <button id="carousel-prev" class="absolute top-1/2 left-3 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors" aria-label="Previous photo">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    <button id="carousel-next" class="absolute top-1/2 right-3 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors" aria-label="Next photo">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                    <!-- Dots -->
+                    <div id="carousel-dots" class="flex justify-center gap-2 mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== WHY ARABELLA ===== -->
     <section class="py-20 bg-bg-light dark:bg-bg-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Why Arabella?</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Rated 4.9 stars — a local favorite in Downey for fresh Mediterranean flavors and outstanding hospitality.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">Rated 4.9 stars, a local favorite in Downey for fresh Mediterranean flavors and outstanding hospitality.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center p-6">
@@ -285,10 +557,10 @@
                 </div>
                 <div class="text-center p-6">
                     <div class="w-16 h-16 bg-secondary/10 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                        <span class="material-icons text-secondary text-3xl">delivery_dining</span>
+                        <span class="material-icons text-secondary text-3xl">shopping_bag</span>
                     </div>
-                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Delivery &amp; Pickup</h4>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Dine-in, takeout, delivery, and curbside pickup to fit any schedule.</p>
+                    <h4 class="font-display font-bold text-lg mb-2 text-gray-900 dark:text-white">Takeout &amp; Pickup</h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Dine-in, takeout, and curbside pickup to fit any schedule.</p>
                 </div>
             </div>
         </div>
@@ -305,28 +577,28 @@
                         <div class="flex items-start gap-4">
                             <span class="material-icons text-green-300">location_on</span>
                             <div>
-                                <p class="font-bold">Downey, CA</p>
-                                <p class="text-green-100 text-sm">Serving the Downey community</p>
+                                <p class="font-bold">9085 Imperial Hwy</p>
+                                <p class="text-green-100 text-sm">Downey, CA 90242</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <span class="material-icons text-green-300">schedule</span>
                             <div>
                                 <p class="font-bold">Open Daily</p>
-                                <p class="text-green-100 text-sm">Mon–Thu 11am–9pm &bull; Fri–Sat 11am–10pm &bull; Sun 12pm–9pm</p>
+                                <p class="text-green-100 text-sm">Sun–Thu 11am–10pm &bull; Fri–Sat 10:30am–12am</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <span class="material-icons text-green-300">restaurant</span>
                             <div>
-                                <p class="font-bold">Dine-In &bull; Takeout &bull; Delivery</p>
+                                <p class="font-bold">Dine-In &bull; Takeout &bull; Curbside Pickup</p>
                                 <p class="text-green-100 text-sm">Curbside pickup also available</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
-                            Order Online <span class="material-icons text-sm">arrow_forward</span>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=9085+Imperial+Hwy+Downey+CA+90242" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
+                            Get Directions <span class="material-icons text-sm">directions</span>
                         </a>
                     </div>
                 </div>
@@ -347,13 +619,15 @@
                         <img src="media/Arabella_logo.png" alt="Arabella" class="h-10 w-auto rounded-lg" />
                         <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
                     </div>
-                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly serving the Downey, CA community.</p>
+                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly located at 9085 Imperial Hwy, Downey, CA 90242.</p>
                 </div>
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="catering.html" class="hover:text-white transition-colors">Catering</a></li>
+                        <li><a href="directions.html" class="hover:text-white transition-colors">Find Us</a></li>
                         <li><a href="family.html" class="hover:text-white transition-colors">Kids &amp; Family</a></li>
                         <li><a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Order Online</a></li>
                     </ul>
@@ -361,10 +635,13 @@
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex justify-between"><span>Mon – Thu</span><span>11am – 9pm</span></li>
-                        <li class="flex justify-between"><span>Fri – Sat</span><span>11am – 10pm</span></li>
-                        <li class="flex justify-between"><span>Sunday</span><span>12pm – 9pm</span></li>
+                        <li class="flex justify-between"><span>Sun – Thu</span><span>11am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>10:30am – 12am</span></li>
                     </ul>
+                    <div class="mt-4 pt-4 border-t border-stone-700">
+                        <p class="text-gray-400 text-sm">9085 Imperial Hwy</p>
+                        <p class="text-gray-400 text-sm">Downey, CA 90242</p>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
@@ -409,6 +686,53 @@
                 mobileMenuBtn.querySelector('.material-icons').textContent = 'menu';
             });
         });
+
+        // Guest Photos Carousel
+        (function() {
+            const track = document.getElementById('carousel-track');
+            const images = track.querySelectorAll('img');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const total = images.length;
+            let current = 0;
+            let autoplayTimer;
+
+            // Build dots
+            for (let i = 0; i < total; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'w-2.5 h-2.5 rounded-full transition-colors';
+                dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+                dot.addEventListener('click', function() { goTo(i); });
+                dotsContainer.appendChild(dot);
+            }
+
+            function updateDots() {
+                dotsContainer.querySelectorAll('button').forEach(function(dot, i) {
+                    dot.className = i === current
+                        ? 'w-2.5 h-2.5 rounded-full bg-primary transition-colors'
+                        : 'w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-stone-600 transition-colors';
+                });
+            }
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                updateDots();
+                resetAutoplay();
+            }
+
+            function resetAutoplay() {
+                clearInterval(autoplayTimer);
+                autoplayTimer = setInterval(function() { goTo(current + 1); }, 4000);
+            }
+
+            prevBtn.addEventListener('click', function() { goTo(current - 1); });
+            nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+            updateDots();
+            resetAutoplay();
+        })();
     </script>
 </body>
 </html>

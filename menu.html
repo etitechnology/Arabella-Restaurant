@@ -3,8 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Menu — Arabella Mediterranean Grill</title>
-    <meta name="description" content="Browse the full menu at Arabella Mediterranean Grill. Appetizers, plates, bowls, wraps, salads, kids menu & more. 100% Halal." />
+    <link rel="icon" type="image/png" href="media/Arabella_icon.png" />
+    <title>Full Menu — Arabella Mediterranean Grill | Halal Restaurant Downey, CA</title>
+    <meta name="description" content="Browse the full menu at Arabella Mediterranean Grill in Downey, CA. Halal appetizers, shawarma, kabobs, lamb chops, falafel, bowls, wraps, plates, salads, kids menu & 30+ sides. View prices and order online." />
+    <meta name="keywords" content="Arabella menu, Mediterranean menu Downey, Halal menu Los Angeles, shawarma menu, kabob menu, Mediterranean food prices, Halal restaurant menu Downey CA, falafel menu, lamb chops price, Mediterranean bowls Downey, Mediterranean wraps, Mediterranean plates, kids menu Mediterranean, Halal food menu LA, Mediterranean restaurant menu near me" />
+    <meta property="og:title" content="Full Menu — Arabella Mediterranean Grill" />
+    <meta property="og:description" content="100% Halal Mediterranean cuisine. Kabobs, shawarma, falafel, bowls, wraps, plates & more. View full menu with prices." />
+    <meta property="og:type" content="restaurant.menu" />
+    <meta property="og:image" content="media/Arabella_logo_white_background.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="menu.html" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Arabella Mediterranean Grill Menu",
+        "description": "Full menu — Halal Mediterranean cuisine including appetizers, plates, bowls, wraps, salads, and kids menu",
+        "hasMenuSection": [
+            {"@type": "MenuSection", "name": "Hot Appetizers", "description": "Falafel, fried cauliflower, kibbeh, cheese rolls & more"},
+            {"@type": "MenuSection", "name": "Cold Appetizers", "description": "Hummus, baba ganoush, grape leaves, labneh & more"},
+            {"@type": "MenuSection", "name": "Salads", "description": "Fattoush, tabouleh, Greek salad"},
+            {"@type": "MenuSection", "name": "Wraps", "description": "Beef shawarma, chicken shawarma, falafel, lamb & more"},
+            {"@type": "MenuSection", "name": "Bowls", "description": "Shawarma, kabob, kafta, salmon & shrimp bowls"},
+            {"@type": "MenuSection", "name": "Plates", "description": "Kabob, shawarma, lamb chops, salmon & more served with rice and salad"},
+            {"@type": "MenuSection", "name": "Tawagen", "description": "Traditional Mediterranean stews"},
+            {"@type": "MenuSection", "name": "Kids Menu", "description": "Chicken sandwich and chicken strips for children"}
+        ],
+        "inLanguage": "en-US"
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,6 +80,8 @@
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
                     <a href="menu.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Menu</a>
+                    <a href="catering.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Catering</a>
+                    <a href="directions.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Find Us</a>
                     <a href="family.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Kids &amp; Family</a>
                     <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-orange-600 text-white px-6 py-2 rounded-full font-bold shadow-lg transform hover:-translate-y-0.5 transition-all text-sm tracking-wide">Order Online</a>
                     <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
@@ -70,6 +99,8 @@
             <div class="px-4 py-4 space-y-3">
                 <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Home</a>
                 <a href="menu.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Menu</a>
+                <a href="catering.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Catering</a>
+                <a href="directions.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Find Us</a>
                 <a href="family.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Kids &amp; Family</a>
                 <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="block bg-primary hover:bg-orange-600 text-white text-center px-6 py-3 rounded-full font-bold shadow-lg">Order Online</a>
                 <button id="mobile-theme-toggle" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 py-2">
@@ -105,9 +136,22 @@
                 <a href="#tawagen" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Tawagen</a>
                 <a href="#kids" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Kids</a>
                 <a href="#extras" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Extras</a>
+                <a href="#desserts" class="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">Desserts</a>
             </div>
         </div>
     </header>
+
+    <!-- ===== FOOD PHOTO GALLERY ===== -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-3">
+            <img src="media/food/beef_kabob_plate.JPEG" alt="Beef Kabob Plate" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+            <img src="media/food/chicken_shawarma_plate.JPEG" alt="Chicken Shawarma Plate" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+            <img src="media/food/hummus_with_beef.JPEG" alt="Hummus with Beef" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+            <img src="media/food/mixed_kabob_plate_3_skewer.JPEG" alt="Mixed Kabob Plate" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+            <img src="media/food/salmon_plate.JPEG" alt="Salmon Plate" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+            <img src="media/food/full_table_spread_all_plates.JPEG" alt="Full table spread" class="rounded-2xl h-32 md:h-40 w-full object-cover hover:scale-105 transition-transform shadow-md" />
+        </div>
+    </section>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-20">
 
@@ -116,6 +160,41 @@
             <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-8">
                 <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Hot Appetizers</h2>
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Starters</span>
+            </div>
+            <!-- Featured Appetizer Photos -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/hummus_with_beef.JPEG" alt="Hummus with Beef" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Hummus with Beef</h4>
+                        <span class="text-primary font-bold text-xs">$16.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/kibbeh_appetizer_plate.JPEG" alt="Kibbeh" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Kibbeh</h4>
+                        <span class="text-primary font-bold text-xs">$11.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/spinach_cheese_triangle_appetizer_or_sambosa.JPEG" alt="Spinach & Cheese Triangle" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Spinach &amp; Cheese</h4>
+                        <span class="text-primary font-bold text-xs">$11.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/coriander_potatoes.JPEG" alt="Coriander Potatoes" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Coriander Potatoes</h4>
+                        <span class="text-primary font-bold text-xs">$8.49</span>
+                    </div>
+                </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                 <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
@@ -232,6 +311,17 @@
                 <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Cold Appetizers</h2>
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Mezza</span>
             </div>
+            <!-- Featured Cold Appetizer Photo -->
+            <div class="mb-10">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow max-w-xs">
+                    <img src="media/food/tourshe_mixed_pickles_plate.JPEG" alt="Tourshi mixed pickles" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Tourshi (Mixed Pickles)</h4>
+                        <span class="text-secondary font-bold text-xs">$6.99</span>
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                 <div class="flex justify-between items-baseline group py-2 border-b border-gray-100 dark:border-stone-800">
                     <div>
@@ -304,6 +394,17 @@
             <div class="flex items-baseline justify-between border-b-2 border-secondary pb-4 mb-8">
                 <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Fresh Salads</h2>
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Greens</span>
+            </div>
+            <!-- Featured Salad Photo -->
+            <div class="mb-10">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow max-w-xs">
+                    <img src="media/food/fattoush_salad.JPEG" alt="Fattoush Salad" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Fattoush Salad</h4>
+                        <span class="text-secondary font-bold text-xs">$11.99</span>
+                    </div>
+                </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow">
@@ -483,6 +584,89 @@
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Entrées</span>
             </div>
             <p class="text-gray-600 dark:text-gray-400 mb-8">All plates served with rice, salad &amp; fresh pita bread.</p>
+            <!-- Featured Plates Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/beef_kabob_plate.JPEG" alt="Beef Kabob Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Beef Kabob</h4>
+                        <span class="text-primary font-bold text-xs">$24.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/beef_shawarma_plate.JPEG" alt="Beef Shawarma Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Beef Shawarma</h4>
+                        <span class="text-primary font-bold text-xs">$24.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/chicken_kabob_plate.JPEG" alt="Chicken Kabob Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Chicken Kabob</h4>
+                        <span class="text-primary font-bold text-xs">$23.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/chicken_shawarma_plate.JPEG" alt="Chicken Shawarma Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Chicken Shawarma</h4>
+                        <span class="text-primary font-bold text-xs">$23.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/kafta_kabob_plate.JPEG" alt="Kafta Kabob Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Kafta Kabob</h4>
+                        <span class="text-primary font-bold text-xs">$23.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/salmon_plate.JPEG" alt="Salmon Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Salmon</h4>
+                        <span class="text-primary font-bold text-xs">$22.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/gyros_plate.JPEG" alt="Gyros Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Gyros</h4>
+                        <span class="text-primary font-bold text-xs">$22.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/full_chicken_plate.JPEG" alt="Full Chicken Plate" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Full Chicken</h4>
+                        <span class="text-primary font-bold text-xs">$26.99</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/mixed_kabob_plate_3_skewer.JPEG" alt="Mixed Kabob Plate 3 Skewer" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Mixed Kabob (3)</h4>
+                        <span class="text-primary font-bold text-xs">$27.49</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <img src="media/food/mixed_kabob_plate_2_skewer.JPEG" alt="Mixed Kabob Plate 2 Skewer" class="h-44 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Chicken &amp; Beef Kabob</h4>
+                        <span class="text-primary font-bold text-xs">$23.99</span>
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-5">
                 <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
                     <h3 class="font-display text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">Beef Kabob Plate</h3>
@@ -633,6 +817,17 @@
                 <h2 class="font-display text-3xl md:text-4xl text-secondary font-bold">Kids Menu</h2>
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Little Ones</span>
             </div>
+            <!-- Featured Kids Photo -->
+            <div class="mb-10">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow max-w-xs">
+                    <img src="media/food/fried_chicken_strips_plate.JPEG" alt="Fried Chicken Strips" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Fried Chicken Strips</h4>
+                        <span class="text-secondary font-bold text-xs">$12.99</span>
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                 <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
                     <div>
@@ -665,6 +860,17 @@
                 <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Extras</h2>
                 <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Sides &amp; More</span>
             </div>
+            <!-- Featured Extras Photo -->
+            <div class="mb-10">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow max-w-xs">
+                    <img src="media/food/vermicelli_rice_side.JPEG" alt="Vermicelli Rice" class="h-40 w-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <h4 class="font-display font-bold text-sm">Vermicelli Rice</h4>
+                        <span class="text-primary font-bold text-xs">Side</span>
+                    </div>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                 <div class="flex justify-between items-baseline group py-3 border-b border-gray-100 dark:border-stone-800">
                     <div>
@@ -683,10 +889,45 @@
             </div>
         </section>
 
+        <!-- Divider -->
+        <div class="flex items-center justify-center gap-4 opacity-30">
+            <div class="h-px bg-gray-400 w-24"></div>
+            <span class="material-icons text-gray-400">cake</span>
+            <div class="h-px bg-gray-400 w-24"></div>
+        </div>
+
+        <!-- ==================== DESSERTS ==================== -->
+        <section class="scroll-mt-28" id="desserts">
+            <div class="flex items-baseline justify-between border-b-2 border-primary pb-4 mb-8">
+                <h2 class="font-display text-3xl md:text-4xl text-primary font-bold">Desserts</h2>
+                <span class="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500 hidden sm:block">Sweet Treats</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-56 overflow-hidden">
+                        <img src="media/food/baklava_pistachio_pastry.JPEG" alt="Baklava with Pistachio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-gray-900 dark:text-white mb-2">Baklava</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Flaky layers of phyllo pastry filled with pistachios and drenched in honey syrup.</p>
+                    </div>
+                </div>
+                <div class="group bg-surface-light dark:bg-surface-dark rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-stone-800">
+                    <div class="h-56 overflow-hidden">
+                        <img src="media/food/basbousa.JPEG" alt="Basbousa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-bold text-gray-900 dark:text-white mb-2">Basbousa</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Traditional semolina cake soaked in sweet syrup, topped with almonds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== ORDER CTA ===== -->
         <section class="bg-primary rounded-3xl p-10 md:p-16 text-center text-white shadow-2xl">
             <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Ready to Order?</h2>
-            <p class="text-orange-100 mb-8 text-lg max-w-xl mx-auto">Skip the line and order online for pickup or delivery. Fresh Mediterranean flavors at your doorstep.</p>
+            <p class="text-orange-100 mb-8 text-lg max-w-xl mx-auto">Skip the line and order online for pickup. Fresh Mediterranean flavors ready when you are.</p>
             <a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg">
                 Order Online Now <span class="material-icons">arrow_forward</span>
             </a>
@@ -702,13 +943,15 @@
                         <img src="media/Arabella_logo.png" alt="Arabella" class="h-10 w-auto rounded-lg" />
                         <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
                     </div>
-                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly serving the Downey, CA community.</p>
+                    <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly located at 9085 Imperial Hwy, Downey, CA 90242.</p>
                 </div>
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="menu.html" class="hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="catering.html" class="hover:text-white transition-colors">Catering</a></li>
+                        <li><a href="directions.html" class="hover:text-white transition-colors">Find Us</a></li>
                         <li><a href="family.html" class="hover:text-white transition-colors">Kids &amp; Family</a></li>
                         <li><a href="https://www.clover.com/online-ordering/arabella-mediterranean--downey" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Order Online</a></li>
                     </ul>
@@ -716,10 +959,13 @@
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex justify-between"><span>Mon – Thu</span><span>11am – 9pm</span></li>
-                        <li class="flex justify-between"><span>Fri – Sat</span><span>11am – 10pm</span></li>
-                        <li class="flex justify-between"><span>Sunday</span><span>12pm – 9pm</span></li>
+                        <li class="flex justify-between"><span>Sun – Thu</span><span>11am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>10:30am – 12am</span></li>
                     </ul>
+                    <div class="mt-4 pt-4 border-t border-stone-700">
+                        <p class="text-gray-400 text-sm">9085 Imperial Hwy</p>
+                        <p class="text-gray-400 text-sm">Downey, CA 90242</p>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-stone-800 pt-8 text-center text-gray-500 text-sm">
