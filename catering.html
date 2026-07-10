@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="media/Arabella_icon.png" />
     <title>Catering — Arabella Mediterranean Grill | Downey, CA</title>
-    <meta name="description" content="Arabella Mediterranean Grill catering for events, parties & corporate functions. Halal Mediterranean platters, family trays & custom menus. Downey, CA." />
+    <meta name="description" content="Arabella Mediterranean Grill catering for events, parties & corporate functions. Halal Mediterranean platters, family trays & custom menus. Call (562) 419-3125. Downey, CA." />
     <meta name="keywords" content="Mediterranean catering Downey, Halal catering Los Angeles, Mediterranean food catering, party platters Downey CA, corporate catering Mediterranean, Arabella catering" />
     <meta property="og:title" content="Catering — Arabella Mediterranean Grill" />
     <meta property="og:description" content="Let us cater your next event with authentic Halal Mediterranean cuisine. Custom menus, family trays & platters." />
@@ -17,10 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- EmailJS SDK — free client-side email service (200 emails/month) -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- reCAPTCHA v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -163,7 +159,7 @@
                             <span class="font-bold text-primary">Custom</span>
                         </div>
                     </div>
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-4 italic">All pricing is customized based on your event. Fill out the form and we'll send you a personalized quote.</p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-4 italic">All pricing is customized based on your event. Contact us with your details and we'll send you a personalized quote.</p>
                 </div>
 
                 <!-- Guest Photos -->
@@ -177,77 +173,50 @@
                 </div>
             </div>
 
-            <!-- Right: Form -->
+            <!-- Right: Contact Info -->
             <div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-8 md:p-10 shadow-xl border border-gray-100 dark:border-stone-700 sticky top-28">
-                <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">Request a Quote</h2>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                <h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">Contact Us for Catering</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mb-8">Call or text us with your event details — number of guests, date, and any dietary needs — and we'll put together a custom quote, usually within 24 hours.</p>
 
-                <form id="catering-form" class="space-y-5">
-                    <div>
-                        <label for="name" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Full Name *</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="Your name" />
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <a href="tel:+15624193125" class="flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary hover:shadow-md transition-all group">
+                        <span class="material-icons text-primary text-3xl">call</span>
                         <div>
-                            <label for="email" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Email *</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="email@example.com" />
+                            <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">Call or Text</p>
+                            <p class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">(562) 419-3125</p>
                         </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Phone *</label>
-                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="(555) 123-4567" />
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div>
-                            <label for="guests" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Number of Guests *</label>
-                            <input type="number" id="guests" name="guests" required min="1" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="50" />
-                        </div>
-                        <div>
-                            <label for="date" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Event Date *</label>
-                            <input type="date" id="date" name="date" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" />
-                        </div>
-                        <div>
-                            <label for="time" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Event Time</label>
-                            <input type="time" id="time" name="time" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors" />
-                        </div>
-                    </div>
-                    <div>
-                        <label for="event-type" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Event Type</label>
-                        <select id="event-type" name="event_type" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
-                            <option value="">Select event type</option>
-                            <option value="wedding">Wedding / Engagement</option>
-                            <option value="corporate">Corporate Event</option>
-                            <option value="birthday">Birthday Party</option>
-                            <option value="graduation">Graduation</option>
-                            <option value="family">Family Gathering</option>
-                            <option value="religious">Religious Event</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Additional Details</label>
-                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-colors resize-none" placeholder="Tell us about your event, dietary requirements, preferred dishes, etc."></textarea>
-                    </div>
-                    <div class="g-recaptcha" data-sitekey="6LdSCWksAAAAAMfWOMgwkfbsvlE9yh4VKaWulf4x"></div>
-                    <button type="submit" id="submit-btn" class="w-full bg-primary hover:bg-orange-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                        <span class="material-icons">send</span>
-                        Send Catering Request
-                    </button>
-                </form>
+                    </a>
 
-                <!-- Success Message (hidden by default) -->
-                <div id="success-msg" class="hidden text-center py-10">
-                    <div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="material-icons text-secondary text-3xl">check_circle</span>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=9085+Imperial+Hwy+Downey+CA+90242" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl border border-gray-200 dark:border-stone-700 hover:border-primary hover:shadow-md transition-all group">
+                        <span class="material-icons text-primary text-3xl">place</span>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-gray-400 font-bold">Visit Us</p>
+                            <p class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">9085 Imperial Hwy, Downey, CA 90242</p>
+                        </div>
+                    </a>
+
+                    <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-200 dark:border-stone-700">
+                        <span class="material-icons text-primary text-3xl">schedule</span>
+                        <div class="flex-1">
+                            <p class="text-xs uppercase tracking-wider text-gray-400 font-bold mb-2">Hours</p>
+                            <div class="flex justify-between text-sm text-gray-700 dark:text-gray-300"><span>Sun – Thu</span><span class="font-medium">10am – 10pm</span></div>
+                            <div class="flex justify-between text-sm text-gray-700 dark:text-gray-300"><span>Fri – Sat</span><span class="font-medium">10am – 12am</span></div>
+                        </div>
                     </div>
-                    <h3 class="font-display text-2xl font-bold text-gray-900 dark:text-white mb-2">Request Sent!</h3>
-                    <p class="text-gray-500 dark:text-gray-400">Thank you! We'll get back to you within 24 hours with a personalized quote.</p>
                 </div>
 
-                <!-- Error Message (hidden by default) -->
-                <div id="error-msg" class="hidden mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-red-600 dark:text-red-400 text-sm text-center">
-                    Something went wrong. Please call us at <a href="tel:+15624193125" class="font-bold underline">(562) 419-3125</a> or try again.
+                <div class="mt-6 pt-6 border-t border-gray-100 dark:border-stone-700">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Or message us on social:</p>
+                    <div class="flex items-center gap-4">
+                        <a href="https://instagram.com/arabellamedgrill" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13-.67-.66-1.34-1.07-2.13-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.41-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a>
+                        <a href="https://www.facebook.com/profile.php?id=61586212318516" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+                    </div>
                 </div>
+
+                <a href="tel:+15624193125" class="mt-8 w-full bg-primary hover:bg-orange-600 text-white py-4 rounded-xl font-bold text-lg shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <span class="material-icons">call</span>
+                    Call to Book Catering
+                </a>
             </div>
         </div>
     </section>
@@ -262,6 +231,14 @@
                         <span class="font-display font-bold text-2xl tracking-wider">ARABELLA</span>
                     </div>
                     <p class="text-gray-400 max-w-sm">Authentic Mediterranean Grill serving the finest Halal cuisine in a modern, welcoming atmosphere. Proudly located at 9085 Imperial Hwy, Downey, CA 90242.</p>
+                    <div class="flex items-center gap-4 mt-5">
+                        <a href="https://instagram.com/arabellamedgrill" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13-.67-.66-1.34-1.07-2.13-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.41-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61586212318516" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Quick Links</h4>
@@ -277,8 +254,8 @@
                 <div>
                     <h4 class="font-display font-bold text-lg mb-4 text-primary">Hours</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li class="flex justify-between"><span>Sun – Thu</span><span>11am – 10pm</span></li>
-                        <li class="flex justify-between"><span>Fri – Sat</span><span>10:30am – 12am</span></li>
+                        <li class="flex justify-between"><span>Sun – Thu</span><span>10am – 10pm</span></li>
+                        <li class="flex justify-between"><span>Fri – Sat</span><span>10am – 12am</span></li>
                     </ul>
                     <div class="mt-4 pt-4 border-t border-stone-700">
                         <p class="text-gray-400 text-sm">9085 Imperial Hwy</p>
@@ -294,90 +271,6 @@
     </footer>
 
     <script>
-        // =====================================================
-        // EMAILJS SETUP — Free client-side email + SMS service
-        // =====================================================
-        // 1. Create a free account at https://www.emailjs.com
-        // 2. Add an Email Service (connect your Gmail account)
-        // 3. Create an Email Template with these variables:
-        //    {{name}}, {{email}}, {{phone}}, {{guests}},
-        //    {{date}}, {{time}}, {{event_type}}, {{message}}
-        // 4. Replace the 3 values below with your own:
-        //
-        // For SMS notifications, create a SECOND template in EmailJS
-        // that sends to your carrier's email-to-SMS gateway:
-        //   T-Mobile:  number@tmomail.net
-        //   AT&T:      number@txt.att.net
-        //   Verizon:   number@vtext.com
-        //   Sprint:    number@messaging.sprintpcs.com
-        // =====================================================
-
-        const EMAILJS_PUBLIC_KEY = 'm2yP6RlvOwbFBXPGe';    // Replace with your EmailJS public key
-        const EMAILJS_SERVICE_ID = 'service_vw3j8me';    // Replace with your EmailJS service ID
-        const EMAILJS_TEMPLATE_ID = 'template_iulumi6';  // Replace with your EmailJS template ID
-        // Optional: SMS template ID (for sending text notification)
-        // const EMAILJS_SMS_TEMPLATE_ID = 'YOUR_SMS_TEMPLATE_ID'; // Replace or leave as-is if not using SMS
-
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-
-        const form = document.getElementById('catering-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const successMsg = document.getElementById('success-msg');
-        const errorMsg = document.getElementById('error-msg');
-
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            errorMsg.classList.add('hidden');
-
-            // Verify reCAPTCHA
-            try {
-                const recaptchaResponse = grecaptcha.getResponse();
-                if (!recaptchaResponse) {
-                    errorMsg.innerHTML = 'Please complete the reCAPTCHA verification.';
-                    errorMsg.classList.remove('hidden');
-                    return;
-                }
-            } catch (err) {
-                console.error('reCAPTCHA not loaded:', err);
-                errorMsg.innerHTML = 'reCAPTCHA failed to load. Please refresh the page and try again.';
-                errorMsg.classList.remove('hidden');
-                return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="material-icons animate-spin">autorenew</span> Sending...';
-
-            const params = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                guests: document.getElementById('guests').value,
-                date: document.getElementById('date').value,
-                time: document.getElementById('time').value || 'Not specified',
-                event_type: document.getElementById('event-type').value || 'Not specified',
-                message: document.getElementById('message').value || 'No additional details',
-                'g-recaptcha-response': grecaptcha.getResponse(),
-            };
-
-            try {
-                // Send email notification
-                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
-
-                // Optional: Send SMS notification (uncomment if you set up SMS template)
-                // await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_SMS_TEMPLATE_ID, params);
-
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-            } catch (error) {
-                console.error('EmailJS error:', error);
-                errorMsg.innerHTML = 'Something went wrong. Please call us at <a href="tel:+15624193125" class="font-bold underline">(562) 419-3125</a> or try again.';
-                errorMsg.classList.remove('hidden');
-                grecaptcha.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span class="material-icons">send</span> Send Catering Request';
-            }
-        });
-
         // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
         const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
